@@ -1,0 +1,708 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #212529;
+}
+
+a {
+  color: #080806;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d78314;
+  text-decoration: none;
+}
+
+.lorem {
+  position: absolute;
+  left: 8.5rem;
+  font-size: 4.2rem;
+  color: white;
+}
+
+.lorem-text {
+  position: absolute;
+  left: 8.5rem;
+  line-height: 150%;
+  font-size: 1rem;
+  color: rgb(230, 224, 224);
+  width: 36rem;
+}
+
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+#header {
+  padding: 0.7%;
+  transition: all 0.5s;
+  background: #fff;
+  margin-top: 2.3rem;
+}
+
+#header .topbar {
+  width: 100%;
+  height: 3rem;
+  background: rgb(247, 243, 243);
+  left: 0rem;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
+
+#header .whatsapp,
+.call,
+.mail {
+  position: absolute;
+  top: 1rem;
+  display: inline-block;
+}
+
+#header .whatsapp {
+  left: 30rem;
+}
+
+#header .call {
+  left: 43rem;
+}
+
+#header .mail {
+  left: 56rem;
+}
+
+#header .logo img {
+  max-height: 5rem;
+  margin-left: 0rem;
+  margin-top: 0.3rem;
+}
+
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+.banner {
+  width: 100%;
+  margin-top: 5.5rem;
+  padding: auto;
+  object-fit: cover;
+}
+
+#Carousel .lorem {
+  top: 18rem;
+}
+
+#Carousel .lorem-text {
+  top: 28rem;
+}
+
+.contact {
+  position: relative;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-wrapper,
+.services-wrapper {
+  position: absolute;
+  top: 35rem;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2.3rem;
+}
+
+.contact-wrapper {
+  border: 0.06rem solid white;
+  background-color: transparent;
+  left: 8.5rem;
+}
+
+.services-wrapper {
+  border: 0;
+  background-color: orange;
+  left: 21rem;
+}
+
+.contact-wrapper:hover {
+  background-color: #454444;
+  color: white;
+}
+
+.services-wrapper:hover {
+  background-color: #4391e5;
+  color: black;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+  position: relative;
+  background-color: white;
+  padding: 25%;
+  font-size: 1rem;
+  color: #565656;
+}
+
+.dotgrid {
+  position: absolute;
+  top: 10rem;
+  left: 2.8rem;
+  width: 7.5rem;
+  height: 6.25rem;
+  overflow: hidden;
+}
+
+.pic {
+  position: absolute;
+  top: 11rem;
+  left: 40.5rem;
+  width: 45rem;
+  height: 28rem;
+  object-fit: cover;
+}
+
+.whitescreen {
+  position: absolute;
+  top: 14rem;
+  left: 5rem;
+  background-color: white;
+  box-shadow: -0.25rem 1rem 3rem rgba(249, 67, 31, 0.07);
+  width: 40rem;
+  height: 26.25rem;
+}
+
+.readmore {
+  position: absolute;
+  top: 35rem;
+  left: 10rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.who-we-are {
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+  display: inline-block;
+  color: orange;
+}
+
+.we-para1,
+.we-para2 {
+  position: absolute;
+  top: 22rem;
+  left: 10rem;
+  line-height: 150%;
+  font-family: proxima-nova;
+  display: inline-block;
+  width: 30.5rem;
+}
+
+/*--------------------------------------------------------------
+# Vertical Carousel
+--------------------------------------------------------------*/
+#verticalcontainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+#carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 36rem;
+  position: relative;
+}
+
+.p-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+#navigation {
+  position: absolute;
+  right: 2%;
+}
+
+#button_a:checked~#carousel .p-wrapper {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+#button_b:checked~#carousel .p-wrapper {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+#button_c:checked~#carousel .p-wrapper {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+[class^="panel_"] {
+  width: 100%;
+  height: 36rem;
+}
+
+
+[class^="label_"] {
+  display: block;
+  cursor: pointer;
+  margin: 0.625rem 0;
+  width: 0.625rem;
+  padding: 50%;
+  border-radius: 0.25rem;
+  background-color: gray;
+  transition: all 0.3s ease;
+}
+
+[class^="label_"]:hover {
+  color: #444;
+  background-color: white;
+}
+
+#button_a:checked~#navigation .label_a,
+#button_b:checked~#navigation .label_b,
+#button_c:checked~#navigation .label_c {
+  cursor: default;
+  color: rgb(192, 43, 43);
+  background-color: orange;
+}
+
+.p-wrapper img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#verticalcontainer .lorem {
+  top: 9.375rem;
+}
+
+#verticalcontainer .lorem-text {
+  top: 15.625rem;
+  color: rgb(207, 206, 206);
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+#services {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+  font-family: "Work Sans";
+}
+
+.headingcontainer {
+  position: relative;
+  left: 34.375rem;
+  padding-top: 5%;
+  font-size: 2.625rem;
+  font-weight: 500;
+  color: #f9a61f;
+}
+
+/*Resale*/
+
+.box1 {
+  position: relative;
+  left: 9.688rem;
+  margin: 3.125rem;
+  background-color: rgba(249, 166, 31, 0.92);
+  box-shadow: 0 1.563rem 2.813rem rgba(249, 166, 31, 0.15);
+  width: 28.75rem;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+.resale {
+  padding-top: 10%;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.bio1,
+.subhead,
+.bio2 {
+  line-height: 150%;
+  text-align: center;
+  display: inline-block;
+  width: 25rem;
+  font-family: "Proxima Nova";
+}
+
+.subhead {
+  position: relative;
+  color: #565656;
+  width: 42rem;
+  left: 23.75rem;
+}
+
+.read-more1,
+.read-more2 {
+  margin-top: 5%;
+  font-weight: 600;
+}
+
+/*Renting*/
+
+.box2 {
+  position: absolute;
+  left: 48.625rem;
+  border: 0.063rem solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 29.25rem;
+  padding-bottom: 1%;
+  text-align: center;
+  top: 16.25rem;
+}
+
+.renting {
+  padding-top: 10%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.bio2 {
+  color: #565656;
+}
+
+.read-more2 {
+  color: #333;
+}
+
+.view-all {
+  padding: 0.75rem 2.375rem;
+  background-color: #333;
+  color: white;
+  margin-left: 43%;
+}
+
+/*--------------------------------------------------------------
+# Why Choose Us
+--------------------------------------------------------------*/
+#build {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1rem;
+  color: #565656;
+  margin-top: 20%;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 0.625rem;
+  height: 100%;
+}
+
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 3%;
+  height: 100%;
+}
+
+.buildimg {
+  padding-left: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.why {
+  left: 53rem;
+  font-size: 2.625rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.us {
+  color: orange;
+}
+
+.lorembuild {
+  left: 53rem;
+  line-height: 150%;
+  font-family: "Proxima Nova";
+  display: inline-block;
+  width: 30.25rem;
+}
+
+.lorembuild1 {
+
+  line-height: 200%;
+  font-family: "Proxima Nova";
+  display: inline-block;
+  width: 30.25rem;
+}
+
+.diamond {
+  margin: 0;
+  float: left;
+  padding-top: 1%;
+}
+
+.buildtext {
+  float: left;
+  padding-left: 3%;
+}
+
+/*--------------------------------------------------------------
+# Our Recent Projects
+--------------------------------------------------------------*/
+#projects {
+  padding: 3%;
+  text-align: center;
+}
+
+#projects .why {
+  font-weight: 550;
+}
+.item {
+  height: 35rem;
+  transition: .4s ease all;
+  transform: scale(0.9);
+}
+
+/*--------------------------------------------------------------
+# stats
+--------------------------------------------------------------*/
+#stats {
+  text-align: center;
+  background-color: #F9A61F;
+  width: 100%;
+  height: 12.5rem;
+  padding: 4%;
+}
+
+/*--------------------------------------------------------------
+# customer Review
+--------------------------------------------------------------*/
+.customer-col1 {
+  float: left;
+  width: 40%;
+  padding: 0.625rem;
+  background-color: black;
+  height: 37.5rem;
+}
+
+.colt1 {
+  color: white;
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.close {
+  position: relative;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/*col2*/
+.customer-col2 {
+  float: left;
+  width: 60%;
+}
+
+.testimonials-container {
+  color: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  transition: all 0.3s ease-in;
+  max-width: 100%;
+  text-align: center;
+  height: 37.5rem;
+  padding: 5%;
+}
+
+.text {
+  line-height: 2rem;
+  padding: 3%;
+  word-spacing: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.authors-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.author {
+  margin: 1.8rem 1.8rem 0;
+  cursor: pointer;
+}
+
+.author.selected img {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.author img {
+  transition: all 0.3s ease-in;
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  opacity: 0.5;
+}
+
+/*--------------------------------------------------------------
+# let's get in touch
+--------------------------------------------------------------*/
+#touch {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+  color: #565656;
+  background-color: #f8fafd;
+  font-family: "Work Sans";
+}
+
+.touchcol1 {
+  float: left;
+  width: 60%;
+  padding-left: 10%;
+  height: 100%;
+}
+
+.touch {
+  color: #085291;
+}
+
+.touchcol2 {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+}
+
+.tpanel {
+  width: 0;
+  height: 50rem;
+}
+
+.tpanel img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.touchaddress {
+  position: relative;
+  width: 35rem;
+  text-align: left;
+  padding: 5rem;
+  color: #878686;
+  font-size: 1rem;
+}
+
+.touchaddress p {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+.touchaddress .icon {
+  width: 6%;
+  height: 5%;
+  float: left;
+  padding: 0.5rem;
+}
+
+.touchaddress .add {
+  padding: 1.2rem;
+  margin-left: 5rem;
+}
+
+.touchaddress .div {
+  padding: 0.5rem;
+}
+
+/*--------------------------------------------------------------
+#topup
+--------------------------------------------------------------*/
+.topup {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/*--------------------------------------------------------------
+#hortional line
+--------------------------------------------------------------*/
+.hrgray {
+  margin: 0.625rem 0 1.25rem;
+  border-bottom: 0.063rem;
+  width: 100%;
+  padding: 0 0.625rem;
+}
+
+/*--------------------------------------------------------------
+#footer
+--------------------------------------------------------------*/
+[class^="fab fa-"] {
+  width: 3.125rem;
+  height: 3.125rem;
+  color: gray;
+  fill-opacity: 0.5;
+  float: right;
+}
+
+.footer {
+  margin-top: 5%;
+  padding: 0rem;
+  line-height: 150%;
+}
+
+.footerlogo img {
+  height: 50%;
+  width: 50%;
+}
+
+.footerhead {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10%;
+}
+
+.footer a {
+  color: gray;
+  fill-opacity: 0.5;
+}
+
+.footer a:hover {
+  color: #d78314;
+  text-decoration: none;
+}
